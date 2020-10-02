@@ -1,5 +1,5 @@
 {% set name = "mgrs" %}
-{% set version = "1.3.8" %}
+{% set version = "1.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5ba69009201cb0f3b333fbd098dcf565f5b9d1d04fc5ef9a2c97fd206b7eebac
+  sha256: 0bee926019fce23dd32f9698ff0ca329447133a78f16971a83891ad759f91a20
 
 build:
   number: 1
-  skip: True  # [(win and vc<14) and (python_impl == 'pypy')]
+  skip: True  # [(win and vc<14) or (python_impl == 'pypy')]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
