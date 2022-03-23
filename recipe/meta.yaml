@@ -1,5 +1,5 @@
 {% set name = "mgrs" %}
-{% set version = "1.4.2" %}
+{% set version = "1.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 12dd1c994d1e3e0ce17e62eeab01243c6f1e6de6a4423dc9d1bcbd84b7448948
+  sha256: fe8acbfc2d59a721affeef9bb38b17b337c0f1e9a64fb9a9b7f64aa17b7017ff
 
 build:
   number: 0
