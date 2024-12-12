@@ -1,6 +1,5 @@
 {% set name = "mgrs" %}
 {% set version = "1.5.0" %}
-{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -23,12 +22,12 @@ requirements:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
-    - python {{ python_min }}
+    - python
     - pip
     - setuptools
     - wheel
   run:
-    - python >={{ python_min }}
+    - python
     - setuptools
     - wheel
     - packaging
@@ -38,7 +37,7 @@ test:
     - mgrs
   requires:
     - pip
-    - python {{ python_min }}
+    - python
   commands:
     - pip check
 
